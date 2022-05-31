@@ -1,0 +1,35 @@
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>FCALC</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Flask Differentiation Calculator</h1>
+        <p> * is multiplication | ** is exponential | The Nth number is required | X, Y</p>
+        <p>Example: 7x^6 + 5x = 7*x**6 + 5*x</p>
+        <p>Derivative Calculator-- Built with flask and Sympy API </p>
+        <form form method="POST">
+            <label>
+                <input placeholder="Differentiate" value="{{ var_1 }}" name="first_inp"/>
+            </label>
+
+            <label>
+                <input placeholder="Nth Derivative" value="{{ var_2 }}" name="degree"/>
+            </label>
+
+            <button class="btn btn-warning">CALCULATE</button>
+
+            <div>
+                <h2>The Derivative of {{ N }} degree : {{ der1 }}</h2>
+                <h3>Simplified: {{ simplefx }}</h3>
+
+                <p>Made with love, @tgcohce</p>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+</html>
